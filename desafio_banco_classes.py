@@ -79,7 +79,7 @@ class ContaCorrente(Conta):
         self.limite = limite
         self.limite_saque = limite_saque
 
-    def sacar(self, valor):                          #ultilizando len para obter a quantidade de saques já realizado e seus valores
+    def sacar(self, valor):                          #ultilizando len para obter a quantidade de saques já realizado e seus valores e verificando se é um saque
         numero_saques = len(
             [transacao for transacao in self.historico.transacoes if transacao["tipo"] == Saque.__name__]   
         )
